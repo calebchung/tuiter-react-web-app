@@ -1,0 +1,95 @@
+.wd-bookmark-title-bar {
+  padding-left: 16px;
+  padding-top: 12px;
+  border-bottom: 1px solid lightgray;
+}
+.wd-bookmark-title-text {
+  color: white;
+  font-size: 20px;
+  margin: 0px;
+}
+.wd-bookmark-handle-text {
+  color: lightgray;
+  font-size: 13px;
+  padding-bottom: 12px;
+  margin: 0px;
+}
+.wd-bookmark-list {
+  padding: 0px;
+}
+.wd-bookmark-list li {
+  padding-top: 12px;
+  padding-left: 16px;
+  float: left;
+  clear: left;
+}
+.wd-avatar-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  float: left;
+}
+.wd-tuit-author-name {
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  margin: 0px;
+  padding-right: 5px;
+  float: left;
+}
+.wd-tuit-handle-date {
+  color: lightgray;
+  font-size: 13px;
+  margin: 0px;
+  float: left;
+}
+.wd-tuit-content {
+  float: left;
+  padding-left: 12px;
+}
+.wd-tuit-text {
+  width: 506px;
+  color: white;
+  font-size: 15px;
+  float: left;
+  margin: 0px;
+  padding-bottom: 12px;
+}
+.wd-tuit-article-image {
+  width: 504px;
+  height: 264px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.wd-tuit-article-title {
+  font-size: 15px;
+  color: white;
+  font-family: bold;
+  padding: 12px;
+  margin: 0px;
+}
+.wd-tuit-article-text {
+  font-size: 15px;
+  color: lightgray;
+  padding: 12px;
+  margin: 0px;
+}
+.wd-article-description {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.wd-tuit-buttons {
+  padding-top: 10px;
+}
+.wd-tuit-buttons a {
+  padding-right: 50px;
+  color: lightgray;
+  text-decoration: none;
+}
+.wd-tuit-buttons img {
+  padding-right: 12px;
+  width: 20px;
+  height: 20px;
+}
+.wd-heart-number {
+  color: red !important;
+}

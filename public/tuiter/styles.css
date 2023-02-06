@@ -1,0 +1,10 @@
+.wd-fg-color-white { color: white; }
+.wd-bg-color-gray {
+  background-color: #404040;
+}
+.wd-bg-color-black {
+  background-color: #000000;
+}
+.wd-border {
+  border: 1px solid rgb(47, 51, 54);
+}
