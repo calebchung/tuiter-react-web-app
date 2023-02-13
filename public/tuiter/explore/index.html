@@ -3,93 +3,303 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <link href="index.css"
-        rel="stylesheet"/>
-  <link href="../styles.css"
-        rel="stylesheet"/>
+  <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="index.css" rel="stylesheet"/>
+  <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+  <link href="../../vendors/fontawesome/css/v4-shims.min.css" rel="stylesheet"/>
 </head>
-<body class="wd-padded-left wd-bg-color-black">
-<div class="wd-border">
-  <input class="wd-fg-color-white wd-bg-color-gray wd-rounded-corners-all-around wd-search-bar"
-         id="search-field" placeholder="Search Tuiter"/>
-  <a href="explore-settings.html"><img src="gear.jpg" class="wd-gear-image"/></a>
-</div>
-<div class="wd-topic-bar wd-border">
-  <a class="wd-first-topic" href="">For you</a>
-  <a href="">Trending</a>
-  <a href="">COVID-19</a>
-  <a href="">News</a>
-  <a href="">Sports</a>
-  <a href="">Entertainment</a>
-</div>
-<ul class="wd-suggested-tuits">
-  <li>
-    <p class="wd-tuit-topic">
-      Trending in Science
-    </p>
-    <p class="wd-tuit-title">
-      Starship
-    </p>
-    <p class="wd-num-tuits">
-      50k Tuits
-    </p>
-  </li>
-  <li>
-    <p class="wd-tuit-topic">
-      Sports - Trending
-    </p>
-    <p class="wd-tuit-title">
-      Joe Rogan
-    </p>
-    <p class="wd-num-tuits">
-      100k Tuits
-    </p>
-  </li>
-  <li>
-    <div class="wd-float-left">
-      <div class="wd-tuit-author">
-        <img src="nyt.jpg"/> The New York Times
+<body>
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
+      <div class="list-group">
+        <i class="fab fa-twitter fa-1x list-group-item list-group-item-action disabled"></i>
+        <a href="../home.html" class="list-group-item list-group-item-action">
+          <i class="fas fa-home fa-1x"></i>
+          <div class="d-none d-xl-inline">
+            Home
+          </div>
+        </a>
+        <a href="index.html" class="list-group-item list-group-item-action active">
+          <i class="fas fa-hashtag fa-1x"></i>
+          <div class="d-none d-xl-inline">
+            Explore
+          </div>
+        </a>
+        <a href="../notifications.html"
+           class="list-group-item list-group-item-action">
+          <i class="fas fa-bell fa-1x"></i>
+          <div class="d-none d-xl-inline">
+            Notifications
+          </div>
+        </a>
+        <a href="../messages.html" class="list-group-item list-group-item-action">
+          <i class="fas fa-mail-bulk fa-1x"></i>
+          <div class="d-none d-xl-inline">
+            Messages
+          </div>
+        </a>
+        <a href="../bookmarks/index.html"
+           class="list-group-item list-group-item-action">
+          <i class="fas fa-bookmark fa-1x"></i>
+          <div class="d-none d-xl-inline">
+            Bookmarks
+          </div>
+        </a>
+        <a href="../lists.html" class="list-group-item list-group-item-action">
+          <i class="fas fa-list fa-1x"></i>
+          <div class="d-none d-xl-inline">
+            Lists
+          </div>
+        </a>
+        <a href="../profile.html" class="list-group-item list-group-item-action">
+          <i class="fas fa-user fa-1x"></i>
+          <div class="d-none d-xl-inline">
+            Profile
+          </div>
+        </a>
+        <a href="../more.html" class="list-group-item list-group-item-action">
+          <i class="fas fa-ellipsis-h fa-1x"></i>
+          <div class="d-none d-xl-inline">
+            More
+          </div>
+        </a>
       </div>
-      <p class="wd-tuit-title">
-        CNN's Cuomo Conundrum
-      </p>
+      <button class="btn btn-primary rounded-pill w-100 mt-2">
+        Tuit
+      </button>
     </div>
-    <img src="danny.jpg" class="wd-tuit-image">
-  </li>
-  <li>
-    <div class="wd-float-left">
-      <div class="wd-tuit-author">
-        <img src="nyt.jpg"/> The New York Times
+    <div class="col-sm-10 col-md-10 col-lg-7 col-xl-6 col-xxl-6">
+      <div class="row">
+        <div class="col-8 wd-search-field pe-0">
+          <i class="fas fa-search wd-search-icon"></i>
+          <input type="text"
+                 class="form-control rounded-pill wd-input-field"
+                 id="search"
+                 value="Search Tuiter">
+        </div>
+        <i class="col-1 fa fa-gear fa-lg pt-2" style="color: dodgerblue"></i>
       </div>
-      <p class="wd-tuit-title">
-        CNN's Cuomo Conundrum
-      </p>
-    </div>
-    <img src="danny.jpg" class="wd-tuit-image">
-  </li>
-  <li>
-    <div class="wd-float-left">
-      <p class="wd-tuit-topic">
-        COVID-19
-      </p>
-      <p class="wd-tuit-title">
-        COVID-19 News and Updates
-      </p>
-    </div>
-    <img src="danny.jpg" class="wd-tuit-image">
-  </li>
-  <li>
-    <div class="wd-float-left">
-      <p class="wd-tuit-topic">
-        Web Dev
-      </p>
-      <p class="wd-tuit-title">
-        Jose's Tips and Tricks
-      </p>
-    </div>
-    <img src="danny.jpg" class="wd-tuit-image">
-  </li>
-</ul>
 
+      <ul class="nav nav-tabs pb-2">
+        <li class="nav-item">
+          <a class="nav-link active" href="for-you.html">For you</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="trending.html">Trending</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="news.html">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sports.html">Sports</a>
+        </li>
+        <li class="nav-item d-none d-md-block">
+          <a class="nav-link" href="entertainment.html">Entertainment</a>
+        </li>
+      </ul>
+
+      <div class="container p-0 position-relative">
+        <img class="w-100" src="starship.jpg" alt="starship"/>
+        <h2 class="position-absolute bottom-0 start-0 text-white p-2 m-0">SpaceX's Starship</h2>
+      </div>
+
+      <div class="list-group border rounded-0 border-solid border-dark">
+        <div class="container position-relative border-bottom border-solid border-dark p-0">
+          <div class="row p-2">
+            <div class="col-9">
+              <p class="wd-tuit-normal">
+                Web Development
+              </p>
+              <p class="wd-tuit-bold">
+                ReactJS
+                <i class="fas fa-check-circle"></i>
+                - 2h
+              </p>
+              <p class="wd-tuit-bold">
+                React.js is a component based front end library that makes it very easy to build
+                Single Page Applications or SPAs
+              </p>
+            </div>
+            <div class="col-3 p-1">
+              <img src="react.png" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        <div class="container position-relative border-bottom border-solid border-dark p-0">
+          <div class="row p-2">
+            <div class="col-10">
+              <p class="wd-tuit-bold">
+                JavaScript
+                <i class="fas fa-check-circle"></i>
+                - 2h
+              </p>
+              <p class="wd-tuit-bold">
+                JavaScript is a programming language that can run on browsers as well as desktops
+              </p>
+              <p class="wd-tuit-normal">
+                123k Tuits
+              </p>
+            </div>
+            <div class="col-2 pe-2">
+              <img src="js.png" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        <div class="container position-relative border-bottom border-solid border-dark p-0">
+          <div class="row p-2">
+            <div class="col-10">
+              <p class="wd-tuit-normal">
+                Web Development
+              </p>
+              <p class="wd-tuit-bold">
+                jQuery
+              </p>
+              <p class="wd-tuit-normal">
+                123k Tuits
+              </p>
+            </div>
+            <div class="col-2 pe-2">
+              <img src="jq.png" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        <div class="container position-relative border-bottom border-solid border-dark p-0">
+          <div class="row p-2">
+            <div class="col-10">
+              <p class="wd-tuit-normal">
+                Web Development
+              </p>
+              <p class="wd-tuit-bold">
+                NodeJS
+                <i class="fas fa-check-circle"></i>
+                - 2h
+              </p>
+              <p class="wd-tuit-normal pb-2">
+                123k Tuits
+              </p>
+            </div>
+            <div class="col-2 pe-2">
+              <img src="node.png" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-4 col-xl-4 col-xxl-4">
+      <div class="list-group border border-solid border-dark rounded-0">
+        <div class="border-bottom border-solid border-dark">
+          <h6 class="fw-bold m-2">Who to follow</h6>
+        </div>
+        <div class="border-bottom border-solid border-dark">
+          <div class="row p-2">
+            <div class="col-2 pe-0">
+              <img src="java.png" class="img-fluid">
+            </div>
+            <div class="col-6">
+              <p class="wd-tuit-bold">
+                Java
+                <i class="fas fa-check-circle"></i>
+              </p>
+              <p class="wd-tuit-normal">
+                @Java
+              </p>
+            </div>
+            <div class="col-4 ps-0 pe-4 pt-2">
+              <button class="btn btn-primary rounded-pill w-100">
+                Follow
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="border-bottom border-solid border-dark">
+          <div class="row p-2">
+            <div class="col-2 pe-0">
+              <img src="rel.webp" class="img-fluid">
+            </div>
+            <div class="col-6">
+              <p class="wd-tuit-bold">
+                Relativity Space
+                <i class="fas fa-check-circle"></i>
+              </p>
+              <p class="wd-tuit-normal">
+                @relativityspace
+              </p>
+            </div>
+            <div class="col-4 ps-0 pe-4 pt-2">
+              <button class="btn btn-primary rounded-pill w-100">
+                Follow
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="border-bottom border-solid border-dark">
+          <div class="row p-2">
+            <div class="col-2 pe-0">
+              <img src="virgin.png" class="img-fluid">
+            </div>
+            <div class="col-6">
+              <p class="wd-tuit-bold">
+                Virgin Galactic
+                <i class="fas fa-check-circle"></i>
+              </p>
+              <p class="wd-tuit-normal">
+                @virgingalactic
+              </p>
+            </div>
+            <div class="col-4 ps-0 pe-4 pt-2">
+              <button class="btn btn-primary rounded-pill w-100">
+                Follow
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="border-bottom border-solid border-dark">
+          <div class="row p-2">
+            <div class="col-2 pe-0">
+              <img src="nasa.png" class="img-fluid">
+            </div>
+            <div class="col-6">
+              <p class="wd-tuit-bold">
+                NASA
+                <i class="fas fa-check-circle"></i>
+              </p>
+              <p class="wd-tuit-normal">
+                @nasa
+              </p>
+            </div>
+            <div class="col-4 ps-0 pe-4 pt-2">
+              <button class="btn btn-primary rounded-pill w-100">
+                Follow
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="border-bottom border-solid border-dark">
+          <div class="row p-2">
+            <div class="col-2 pe-0">
+              <img src="tesla.png" class="img-fluid">
+            </div>
+            <div class="col-6">
+              <p class="wd-tuit-bold">
+                Tesla
+                <i class="fas fa-check-circle"></i>
+              </p>
+              <p class="wd-tuit-normal">
+                @tesla
+              </p>
+            </div>
+            <div class="col-4 ps-0 pe-4 pt-2">
+              <button class="btn btn-primary rounded-pill w-100">
+                Follow
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 </body>
 </html>
