@@ -7,24 +7,18 @@ import whoReducer
 import tuitsReducer from "./tuits/tuits-reducer";
 import { configureStore } from '@reduxjs/toolkit';
 import {Provider} from "react-redux";
-import HomeComponent from "./home";
 const store = configureStore({
   reducer: {who: whoReducer, tuits: tuitsReducer}});
 
 
-function Tuiter({
-  active = "home"}) {
+function Explore() {
   return (
       <Provider store={store}>
         <div className="row mt-2">
           <div className="col-2 col-md-2 col-lg-1 col-xl-2">
-            <NavigationSidebar active={active}/>
+            <NavigationSidebar active="explore"/>
           </div>
-          <div className={`col-10 col-md-10 col-lg-7 col-xl-6 ${active === 'home'?'':'d-none'}`}
-               style={{"position": "relative"}}>
-            <HomeComponent/>
-          </div>
-          <div className={`col-10 col-md-10 col-lg-7 col-xl-6 ${active === 'explore'?'':'d-none'}`}
+          <div className="col-10 col-md-10 col-lg-7 col-xl-6"
                style={{"position": "relative"}}>
             <ExploreComponent/>
           </div>
@@ -36,4 +30,4 @@ function Tuiter({
   );
 }
 
-export default Tuiter
+export default Explore
