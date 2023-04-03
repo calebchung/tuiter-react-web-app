@@ -1,7 +1,12 @@
-import React, {useState} from "react";
+import React from "react";
+import {updateTuitThunk}
+  from "../../services/tuits-thunks";
+import {useDispatch} from "react-redux";
+
 const TuitStats = (
     {
-      tuit = {"_id": 234,
+      tuit = {
+        "_id": 234,
         "topic": "Space",
         "userName": "SpaceX",
         "time": "2h",
@@ -12,49 +17,52 @@ const TuitStats = (
         "retuits": 432,
         "likes": 2345,
         "handle": "@spacex",
-        "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars"}
+        "dislikes": 1234,
+        "disliked": false,
+        "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars"
+      }
     }
 ) => {
-  const [tuitState, setTuitState] = useState(tuit);
-
-  const likeTuitClickHandler = (tuit) => {
-    let increment = 1
-    if (tuit.liked) {
-      increment = -1
-    }
-    const updatedTuit = {
-      "_id": tuit._id,
-      "topic": tuit.topic,
-      "userName": tuit.userName,
-      "time": tuit.time,
-      "title": tuit.title,
-      "image": tuit.image,
-      "liked": !tuit.liked,
-      "replies": tuit.replies,
-      "retuits": tuit.retuits,
-      "likes": tuit.likes + increment,
-      "handle": tuit.handle,
-      "tuit": tuit.tuit
-    }
-    setTuitState(updatedTuit)
-  }
-  return(
+  const dispatch = useDispatch();
+  return (
       <div className="row">
         <i className="bi bi-chat col-auto"></i>
         <div className="col-auto ps-0">
-          {tuitState.replies}
+          {tuit.replies}
         </div>
         <i className="bi bi-arrow-repeat col-auto ps-5"></i>
         <div className="col-auto ps-0">
-          {tuitState.retuits}
+          {tuit.retuits}
         </div>
-        {!tuitState.liked && <i className="bi bi-heart col-auto ps-5" onClick={() =>
-            likeTuitClickHandler(tuitState)}></i>}
-        {tuitState.liked && <i className="bi bi-heart-fill col-auto ps-5" style={{"color": "red"}} onClick={() =>
-            likeTuitClickHandler(tuitState)}></i>}
-
+        {!tuit.liked && <i className="bi bi-heart col-auto ps-5"
+                           onClick={() => dispatch(updateTuitThunk({
+                             ...tuit,
+                             likes: tuit.likes + 1,
+                             liked: !tuit.liked
+                           }))}></i>}
+        {tuit.liked && <i className="bi bi-heart-fill col-auto ps-5 text-danger"
+                          onClick={() => dispatch(updateTuitThunk({
+                            ...tuit,
+                            likes: tuit.likes - 1,
+                            liked: !tuit.liked
+                          }))}></i>}
         <div className="col-auto ps-0">
-          {tuitState.likes}
+          {tuit.likes}
+        </div>
+        {!tuit.disliked && <i className="bi bi-hand-thumbs-down col-auto ps-5"
+                           onClick={() => dispatch(updateTuitThunk({
+                             ...tuit,
+                             dislikes: tuit.dislikes + 1,
+                             disliked: !tuit.disliked
+                           }))}></i>}
+        {tuit.disliked && <i className="bi bi-hand-thumbs-down-fill col-auto ps-5"
+                          onClick={() => dispatch(updateTuitThunk({
+                            ...tuit,
+                            dislikes: tuit.dislikes - 1,
+                            disliked: !tuit.disliked
+                          }))}></i>}
+        <div className="col-auto ps-0">
+          {tuit.dislikes}
         </div>
         <i className="bi bi-share col-auto ps-5"></i>
       </div>

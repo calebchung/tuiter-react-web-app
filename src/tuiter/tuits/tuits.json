@@ -9,6 +9,8 @@
   "retuits": 432,
   "likes": 2345,
   "handle": "@spacex",
+  "dislikes": 1234,
+  "disliked": false,
   "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars"},
   {
     "_id": 345,
@@ -22,6 +24,8 @@
     "retuits": 123,
     "likes": 3456,
     "handle": "@tesla",
+    "dislikes": 1234,
+    "disliked": false,
     "tuit": "Autopilot is an advanced driver assistance system that enhances safety and convenience behind the wheel. When used properly, Autopilot reduces your overall workload as a driver. Each new Tesla vehicle is equipped with eight external cameras and powerful vision processing to provide an additional layer of safety."
   }
 ]
